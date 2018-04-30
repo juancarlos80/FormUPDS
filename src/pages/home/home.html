@@ -1,14 +1,104 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+<ion-content id="fondo_principal">
+<div class="back_image"></div>
+ <ion-grid>
+  <ion-row>
+    <ion-col col-6>
+      <img src="assets/imgs/letras.png" class="letras">
+    </ion-col>
+    <ion-col col-5>
+      <!-- Lista principal -->
+        <div text-center class="logo_head">
+          <img src="assets/imgs/logo_upds.png" (click)="irListado()">
+        </div>
+
+        <div class="clearfix"></div>
+        <h2 text-center class="subtitulo">FORMULARIO</h2>
+        <div class="linea"></div>
+
+        <ion-list class="lista_form">
+          <ion-item  class="input_row">
+            <ion-input [(ngModel)]="nombres" type="text" class="input_form" placeholder="NOMBRES"></ion-input>
+          </ion-item>
+
+          <ion-item class="input_row">
+            <ion-input [(ngModel)]="apellidos" type="text" class="input_form" placeholder="APELLIDOS"></ion-input>
+          </ion-item>
+
+          <ion-item class="input_row">
+            <ion-label color="light">FECHA DE NAC.</ion-label>
+            <ion-datetime [(ngModel)]="nacimiento" displayFormat="MM-DD-YYYY" class="input_form" ></ion-datetime>
+          </ion-item>
+
+          <ion-item class="input_row">
+            <ion-input [(ngModel)]="email" type="email" class="input_form" placeholder="E-MAIL"></ion-input>
+          </ion-item>
+
+          <ion-item class="input_row">
+            <ion-label color="light">CIUDAD</ion-label>
+            <ion-select [(ngModel)]="ciudad" >
+              <ion-option value="beni">BENI</ion-option>
+              <ion-option value="cochabamba">COCHABAMBA</ion-option>
+              <ion-option value="la_paz">LA PAZ</ion-option>
+              <ion-option value="sucre">SUCRE</ion-option>
+              <ion-option value="oruro">ORURO</ion-option>
+              <ion-option value="pando">PANDO</ion-option>
+              <ion-option value="potosi">POTOSI</ion-option>
+              <ion-option value="santa_cruz">SANTA CRUZ</ion-option>
+              <ion-option value="tarija">TARIJA</ion-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item class="input_row">
+            <ion-input [(ngModel)]="celular" type="tel" placeholder="NUM. CELULAR"></ion-input>
+          </ion-item>
+
+          <ion-item class="input_row">
+            <ion-input [(ngModel)]="colegio" type="text" placeholder="COLEGIO"></ion-input>
+          </ion-item>
+        </ion-list>
+
+        <div style="margin-top: 60px;"></div>
+        <h2 text-center class="subtitulo">CARRERAS DE INTERÉS</h2>
+        <div class="linea"></div>
+        <ion-list class="lista_carreras">
+          <ion-item class="fondo_fila" no-lines>
+            <ion-label stacked color="light">FACULTAD DE CIENCIAS EMPRESARIALES</ion-label>
+            <ion-select [(ngModel)]="fempresariales" placeholder=" - NINGUNO - " class="blanco">
+              <ion-option value="administracion_empresas">Administración de Empresas</ion-option>
+              <ion-option value="contaduria_publica">Contaduría Pública</ion-option>
+              <ion-option value="ingenieria_comercial">Ingeniería Comercial</ion-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item class="fondo_fila" no-lines>
+            <ion-label stacked color="light">FACULTAD DE INGENIERIA</ion-label>
+            <ion-select [(ngModel)]="fingenieria" placeholder=" - NINGUNO - " class="blanco">
+              <ion-option value="ingenieria_sistemas">Ingeniería de Sistemas</ion-option>
+              <ion-option value="ingenieria_petrolera">Ingeniería en Gestión Petrolera</ion-option>
+              <ion-option value="ingenieria_telecomunicaciones">Ingeniería en Redes y Telecomunicaciones</ion-option>
+              <ion-option value="ingenieria_industrial">Ingeniería Industrial</ion-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item class="fondo_fila" no-lines>
+            <ion-label stacked color="light">FACULTAD DE CIENCIAS JURÍDICAS</ion-label>
+            <ion-select [(ngModel)]="fjuridicas" placeholder=" - NINGUNO - " class="blanco">
+              <ion-option value="licenciatura_derecho">Licenciatura en Derecho</ion-option>
+            </ion-select>
+          </ion-item>
+
+        </ion-list>
+
+        <div padding>
+          <button  ion-button color="primary" block (click)="verificarForm()">Registrar</button>
+        </div>
+
+
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+</ion-grid>
+
 </ion-content>

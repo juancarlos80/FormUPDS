@@ -1,0 +1,60 @@
+
+
+<ion-content id="fondo_principal">
+<div class="back_image"></div>
+ <ion-grid>
+  <ion-row>
+    <ion-col col-3>
+    </ion-col>
+    <ion-col col-8>
+      <!-- Lista principal -->
+        <div text-center class="logo_head">
+          <img src="assets/imgs/logo_upds.png">
+        </div>
+
+        <div class="clearfix"></div>
+        <h2 text-center class="subtitulo">Registrados</h2>
+        <div class="linea"></div>
+
+        <ion-list class="lista_form">
+
+        </ion-list>
+
+        <div style="width:100%; overflow:scroll; height: 60%">
+        <table padding class="tabla_lista">
+          <tr>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Nacimiento</th>
+            <th>Email</th>
+            <th>Ciudad</th>
+            <th>Celular</th>
+            <th>Colegio</th>
+            <th>Carreras</th>
+
+          </tr>
+          <tr *ngFor="let person of personas">
+            <td>{{person.nombres}}</td>
+            <td>{{person.apellidos}}</td>
+            <td>{{person.nacimiento?person.nacimiento:'-'}}</td>
+            <td>{{person.email?person.email:'-'}}</td>
+            <td>{{person.ciudad}}</td>
+            <td>{{person.celular}}</td>
+            <td>{{person.colegio}}</td>
+            <td>{{person.carreras}}</td>
+          </tr>
+        </table>
+      </div>
+
+
+        <div padding>
+          <button ion-button color="primary" block (click)="volver()">Volver</button>
+        </div>
+
+
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+</ion-grid>
+
+</ion-content>

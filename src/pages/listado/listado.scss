@@ -6,6 +6,26 @@ page-home {
   background-color: #0052a0;
 }
 
+.tabla_lista{
+    border: black 1px solid;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #0052a0;
+    color: white;    
+}
+
+th {
+  border: black 1px solid;
+  padding: 7px;
+  font-size: 16px;
+}
+
+td {
+  border: black 1px solid;
+  padding: 5px;
+  font-size: 12px;
+}
+
 .back_image{
   position: absolute;
   background-image: url("../assets/imgs/fondo_pro.jpg");
