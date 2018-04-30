@@ -1,0 +1,8 @@
+{
+  "name": "FormIpad",
+  "app_id": "b436f757",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
