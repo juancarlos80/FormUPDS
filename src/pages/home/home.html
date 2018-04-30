@@ -14,7 +14,7 @@
         </div>
 
         <div class="clearfix"></div>
-        <h2 text-center class="subtitulo">FORMULARIO</h2>
+        <h3 text-center class="subtitulo">FORMULARIO</h3>
         <div class="linea"></div>
 
         <ion-list class="lista_form">
@@ -27,8 +27,8 @@
           </ion-item>
 
           <ion-item class="input_row">
-            <ion-label color="light">FECHA DE NAC.</ion-label>
-            <ion-datetime [(ngModel)]="nacimiento" displayFormat="MM-DD-YYYY" class="input_form" ></ion-datetime>
+            <ion-label color="light" class="input_form">FECHA DE NAC.</ion-label>
+            <ion-datetime [(ngModel)]="nacimiento" displayFormat="MM-DD-YYYY" class="input_form fix_date" ></ion-datetime>
           </ion-item>
 
           <ion-item class="input_row">
@@ -36,7 +36,7 @@
           </ion-item>
 
           <ion-item class="input_row">
-            <ion-label color="light">CIUDAD</ion-label>
+            <ion-label color="light" class="input_form">CIUDAD</ion-label>
             <ion-select [(ngModel)]="ciudad" >
               <ion-option value="beni">BENI</ion-option>
               <ion-option value="cochabamba">COCHABAMBA</ion-option>
@@ -51,15 +51,15 @@
           </ion-item>
 
           <ion-item class="input_row">
-            <ion-input [(ngModel)]="celular" type="tel" placeholder="NUM. CELULAR"></ion-input>
+            <ion-input [(ngModel)]="celular" type="tel" placeholder="NUM. CELULAR" class="input_form"></ion-input>
           </ion-item>
 
           <ion-item class="input_row">
-            <ion-input [(ngModel)]="colegio" type="text" placeholder="COLEGIO"></ion-input>
+            <ion-input [(ngModel)]="colegio" type="text" placeholder="COLEGIO" class="input_form"></ion-input>
           </ion-item>
         </ion-list>
 
-        <div style="margin-top: 60px;"></div>
+        <div style="margin-top: 50px;"></div>
         <h2 text-center class="subtitulo">CARRERAS DE INTERÉS</h2>
         <div class="linea"></div>
         <ion-list class="lista_carreras">

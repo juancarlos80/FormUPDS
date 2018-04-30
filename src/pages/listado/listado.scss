@@ -1,17 +1,10 @@
-page-home {
-  background-color: #0052a0;
-}
-
-#fondo_principal{
-  background-color: #0052a0;
-}
 
 .tabla_lista{
     border: black 1px solid;
     border-collapse: collapse;
     width: 100%;
     background-color: #0052a0;
-    color: white;    
+    color: white;
 }
 
 th {
@@ -24,71 +17,4 @@ td {
   border: black 1px solid;
   padding: 5px;
   font-size: 12px;
-}
-
-.back_image{
-  position: absolute;
-  background-image: url("../assets/imgs/fondo_pro.jpg");
-  background-repeat: no-repeat;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-}
-
-.input_row {
-  color: white;
-  background-color: #80a9d0;
-}
-
-.input_form{
-  height: 20px;
-  font-size: 14px;
-}
-
-.logo_head{
-  /*background-color: #0052a0;*/
-  width: 80%;
-  margin-left: 10%;
-  /*float: left;*/
-}
-
-.letras{
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  margin-bottom: 20px;
-  margin-left: 5%;
-}
-
-.clearfix{
-	clear: both;
-	line-height: 0px;
-}
-
-.lista_form{
-  margin-top: 20px
-}
-
-.lista_carreras{
-  margin-top: 20px
-}
-
-.subtitulo{
-  color: #f4f4f4;
-}
-
-.linea{
-  width: 100%;
-  height: 5px;
-  background-color:#80a9d0;
-}
-
-.fondo_fila{
-  background-color: #0052a0;
-  margin-top: 10px;
-}
-
-.blanco{
-  background-color: #f4f4f4;
 }

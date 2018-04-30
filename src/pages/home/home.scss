@@ -16,9 +16,11 @@ page-home {
   height: 100%;
 }
 
+
 .input_row {
   color: white;
   background-color: #80a9d0;
+  margin-top: 0px;
 }
 
 .input_form{
@@ -27,10 +29,8 @@ page-home {
 }
 
 .logo_head{
-  /*background-color: #0052a0;*/
-  width: 80%;
-  margin-left: 10%;
-  /*float: left;*/
+  width: 60%;
+  margin-left: 20%;
 }
 
 .letras{
@@ -51,7 +51,7 @@ page-home {
 }
 
 .lista_carreras{
-  margin-top: 20px
+  margin-top: 10px
 }
 
 .subtitulo{
@@ -71,4 +71,11 @@ page-home {
 
 .blanco{
   background-color: #f4f4f4;
+  height: 32px;
+  font-size: 12px;
+}
+
+.fix_date{
+  margin-top: -12px;
+  min-height: 26px;
 }
