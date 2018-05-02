@@ -58,13 +58,13 @@ export class HomePage {
 
         this.storage.get('encuestados').then((total) => {
           console.log("total encuestados: "+total)
-          if( total == undefined || total == null ){
+          if( total == undefined || total == null || total == 0 ){
             console.log("defino por primera vez, encuestados : 0");
             this.encuestados = 0;
             this.storage.set('encuestados', this.encuestados);
           } else {
             this.encuestados = total;
-            for( let i=0; i< total; i++){
+            for( let i=total-1; i>=0; i--){
               this.storage.get("persona_"+i).then( (per) => {
                 this.personas.push( per );
                 console.log(per);
@@ -166,7 +166,9 @@ export class HomePage {
       this.encuestados++;
       this.storage.set('encuestados', this.encuestados);
 
-      this.personas.push(valor);
+      //this.personas.push(valor);
+
+      this.personas.splice( 0, 0, valor );
 
       this.mostrarExito();
       this.nombres = "";
