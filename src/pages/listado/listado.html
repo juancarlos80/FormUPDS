@@ -15,11 +15,7 @@
         <div class="clearfix"></div>
         <h2 text-center class="subtitulo">Registrados</h2>
         <div class="linea"></div>
-
-        <ion-list class="lista_form">
-
-        </ion-list>
-
+      
         <div style="width:100%; overflow:scroll; height: 60%">
         <table padding class="tabla_lista">
           <tr>
@@ -31,7 +27,6 @@
             <th>Celular</th>
             <th>Colegio</th>
             <th>Carreras</th>
-
           </tr>
           <tr *ngFor="let person of personas">
             <td>{{person.nombres}}</td>
@@ -45,11 +40,9 @@
           </tr>
         </table>
       </div>
-
-
-        <div padding>
-          <button ion-button color="primary" block (click)="volver()">Volver</button>
-        </div>
+      <div padding>
+        <button ion-button color="primary" block (click)="volver()">Volver</button>
+      </div>
     </ion-col>
     <ion-col col-2></ion-col>
   </ion-row>
