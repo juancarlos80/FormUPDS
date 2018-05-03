@@ -48,31 +48,21 @@ export class HomePage {
 
     this.storage.get('encuestados').then((total) => {
       console.log("total encuestados: "+total)
-      if( total == undefined || total == null ){
+      if( total == undefined || total == null || total == 0){
         console.log("defino por primera vez, encuestados : 0");
         this.encuestados = 0;
         this.storage.set('encuestados', this.encuestados);
       } else {
         this.encuestados = total;
+        /*console.log("Reseteando los encuestados")
+        this.encuestados = 0;*/
 
-
-        this.storage.get('encuestados').then((total) => {
-          console.log("total encuestados: "+total)
-          if( total == undefined || total == null || total == 0 ){
-            console.log("defino por primera vez, encuestados : 0");
-            this.encuestados = 0;
-            this.storage.set('encuestados', this.encuestados);
-          } else {
-            this.encuestados = total;
-            for( let i=total-1; i>=0; i--){
-              this.storage.get("persona_"+i).then( (per) => {
-                this.personas.push( per );
-                console.log(per);
-              });
-            }
-          }
-        });
-
+        for( let i=this.encuestados-1; i>=0; i--){
+          this.storage.get("persona_"+i).then( (per) => {
+            this.personas.push( per );
+            console.log(per);
+          });
+        }
       }
     });
   }
@@ -117,28 +107,24 @@ export class HomePage {
       this.mostrarError("La dirección de correo no es válida");
       return;
     }
-
     persona.email = this.email;
 
     if( this.ciudad.trim() === ""){
       this.mostrarError("Debes ingresar el nombre de la ciudad de residencia");
       return;
     }
-
     persona.ciudad = this.ciudad;
 
     if( this.celular.trim() === ""){
-      this.mostrarError("Debes definir el apellido");
+      this.mostrarError("Debes ingresar el numero de celular");
       return;
     }
-
     persona.celular = this.celular;
 
     if( this.colegio.trim() === ""){
-      this.mostrarError("Debes definir el apellido");
+      this.mostrarError("Debes definir el nombre del colegio");
       return;
     }
-
     persona.colegio = this.colegio;
 
     if( this.fempresariales != ""){
